@@ -1,0 +1,17 @@
+{
+  "name": "github-blog",
+  "version": "0.0.1",
+  "description": "vitepress-blog",
+  "main": "index.js",
+  "author": "cxl",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  }
+}
