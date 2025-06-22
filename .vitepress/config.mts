@@ -2,6 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  // 基础路径
+  base: "/",
   head: [
     ['link', { rel: 'icon', href: '/images/favicon.ico' }]
     ],

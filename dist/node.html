@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Node.js 开发文档 | 晓磊日记屋</title>
+    <meta name="description" content="学习记录">
+    <meta name="generator" content="VitePress v1.6.3">
+    <link rel="preload stylesheet" href="/assets/style.DFTx90Kk.css" as="style">
+    <link rel="preload stylesheet" href="/vp-icons.css" as="style">
+    
+    <script type="module" src="/assets/app.DCe6Z7-9.js"></script>
+    <link rel="preload" href="/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/assets/chunks/theme.gHCrp1QU.js">
+    <link rel="modulepreload" href="/assets/chunks/framework.Dgg8-8ov.js">
+    <link rel="modulepreload" href="/assets/node.md.B2VSpatu.lean.js">
+    <link rel="icon" href="/images/favicon.ico">
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-5d98c3a5><!--[--><!--]--><!--[--><span tabindex="-1" data-v-0b0ada53></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-0b0ada53>Skip to content</a><!--]--><!----><header class="VPNav" data-v-5d98c3a5 data-v-ae24b3ad><div class="VPNavBar" data-v-ae24b3ad data-v-6aa21345><div class="wrapper" data-v-6aa21345><div class="container" data-v-6aa21345><div class="title" data-v-6aa21345><div class="VPNavBarTitle has-sidebar" data-v-6aa21345 data-v-1168a8e4><a class="title" href="/" data-v-1168a8e4><!--[--><!--]--><!--[--><img class="VPImage logo" src="/images/xiaolei.png" alt data-v-8426fc1a><!--]--><span data-v-1168a8e4>晓磊日记屋</span><!--[--><!--]--></a></div></div><div class="content" data-v-6aa21345><div class="content-body" data-v-6aa21345><!--[--><!--]--><div class="VPNavBarSearch search" data-v-6aa21345><!----></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-6aa21345 data-v-dc692963><span id="main-nav-aria-label" class="visually-hidden" data-v-dc692963> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/" tabindex="0" data-v-dc692963 data-v-e56f3d57><!--[--><span data-v-e56f3d57>首页</span><!--]--></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-6aa21345 data-v-6c893767><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-6c893767 data-v-5337faa4 data-v-1d5665e3><span class="check" data-v-1d5665e3><span class="icon" data-v-1d5665e3><!--[--><span class="vpi-sun sun" data-v-5337faa4></span><span class="vpi-moon moon" data-v-5337faa4></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-6aa21345 data-v-0394ad82 data-v-7bc22406><!--[--><a class="VPSocialLink no-icon" href="https://diarylodgex.github.io" aria-label="github" target="_blank" rel="noopener" data-v-7bc22406 data-v-bd121fe5><span class="vpi-social-github"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-6aa21345 data-v-bb2aa2f0 data-v-cf11d7a2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-cf11d7a2><span class="vpi-more-horizontal icon" data-v-cf11d7a2></span></button><div class="menu" data-v-cf11d7a2><div class="VPMenu" data-v-cf11d7a2 data-v-b98bc113><!----><!--[--><!--[--><!----><div class="group" data-v-bb2aa2f0><div class="item appearance" data-v-bb2aa2f0><p class="label" data-v-bb2aa2f0>Appearance</p><div class="appearance-action" data-v-bb2aa2f0><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-bb2aa2f0 data-v-5337faa4 data-v-1d5665e3><span class="check" data-v-1d5665e3><span class="icon" data-v-1d5665e3><!--[--><span class="vpi-sun sun" data-v-5337faa4></span><span class="vpi-moon moon" data-v-5337faa4></span><!--]--></span></span></button></div></div></div><div class="group" data-v-bb2aa2f0><div class="item social-links" data-v-bb2aa2f0><div class="VPSocialLinks social-links-list" data-v-bb2aa2f0 data-v-7bc22406><!--[--><a class="VPSocialLink no-icon" href="https://diarylodgex.github.io" aria-label="github" target="_blank" rel="noopener" data-v-7bc22406 data-v-bd121fe5><span class="vpi-social-github"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-6aa21345 data-v-e5dd9c1c><span class="container" data-v-e5dd9c1c><span class="top" data-v-e5dd9c1c></span><span class="middle" data-v-e5dd9c1c></span><span class="bottom" data-v-e5dd9c1c></span></span></button></div></div></div></div><div class="divider" data-v-6aa21345><div class="divider-line" data-v-6aa21345></div></div></div><!----></header><div class="VPLocalNav has-sidebar empty" data-v-5d98c3a5 data-v-a6f0e41e><div class="container" data-v-a6f0e41e><button class="menu" aria-expanded="false" aria-controls="VPSidebarNav" data-v-a6f0e41e><span class="vpi-align-left menu-icon" data-v-a6f0e41e></span><span class="menu-text" data-v-a6f0e41e>Menu</span></button><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-a6f0e41e data-v-8a42e2b4><button data-v-8a42e2b4>Return to top</button><!----></div></div></div><aside class="VPSidebar" data-v-5d98c3a5 data-v-319d5ca6><div class="curtain" data-v-319d5ca6></div><nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-319d5ca6><span class="visually-hidden" id="sidebar-aria-label" data-v-319d5ca6> Sidebar Navigation </span><!--[--><!--]--><!--[--><div class="no-transition group" data-v-c40bc020><section class="VPSidebarItem level-0" data-v-c40bc020 data-v-b3fd67f8><div class="item" role="button" tabindex="0" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><h2 class="text" data-v-b3fd67f8>Nginx</h2><!----></div><div class="items" data-v-b3fd67f8><!--[--><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/nginx.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>Nginx</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-c40bc020><section class="VPSidebarItem level-0 has-active" data-v-c40bc020 data-v-b3fd67f8><div class="item" role="button" tabindex="0" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><h2 class="text" data-v-b3fd67f8>Node.js</h2><!----></div><div class="items" data-v-b3fd67f8><!--[--><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/node.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>Node.js</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-c40bc020><section class="VPSidebarItem level-0" data-v-c40bc020 data-v-b3fd67f8><div class="item" role="button" tabindex="0" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><h2 class="text" data-v-b3fd67f8>Electron</h2><!----></div><div class="items" data-v-b3fd67f8><!--[--><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/electron.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>Electron 基本信息</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><!--]--><!--[--><!--]--></nav></aside><div class="VPContent has-sidebar" id="VPContent" data-v-5d98c3a5 data-v-1428d186><div class="VPDoc has-sidebar has-aside" data-v-1428d186 data-v-39a288b8><!--[--><!--]--><div class="container" data-v-39a288b8><div class="aside" data-v-39a288b8><div class="aside-curtain" data-v-39a288b8></div><div class="aside-container" data-v-39a288b8><div class="aside-content" data-v-39a288b8><div class="VPDocAside" data-v-39a288b8 data-v-3f215769><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-3f215769 data-v-a5bbad30><div class="content" data-v-a5bbad30><div class="outline-marker" data-v-a5bbad30></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-a5bbad30>On this page</div><ul class="VPDocOutlineItem root" data-v-a5bbad30 data-v-b933a997><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-3f215769></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-39a288b8><div class="content-container" data-v-39a288b8><!--[--><!--]--><main class="main" data-v-39a288b8><div style="position:relative;" class="vp-doc _node" data-v-39a288b8><div><h1 id="node-js-开发文档" tabindex="-1">Node.js 开发文档 <a class="header-anchor" href="#node-js-开发文档" aria-label="Permalink to &quot;Node.js 开发文档&quot;">​</a></h1><h2 id="一、核心概念" tabindex="-1">一、核心概念 <a class="header-anchor" href="#一、核心概念" aria-label="Permalink to &quot;一、核心概念&quot;">​</a></h2><h3 id="_1-事件驱动架构" tabindex="-1">1. 事件驱动架构 <a class="header-anchor" href="#_1-事件驱动架构" aria-label="Permalink to &quot;1. 事件驱动架构&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>const EventEmitter = require(&#39;events&#39;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>class MyEmitter extends EventEmitter {}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>const myEmitter = new MyEmitter();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 注册事件监听器</span></span>
+<span class="line"><span>myEmitter.on(&#39;event&#39;, () =&gt; {</span></span>
+<span class="line"><span>  console.log(&#39;事件触发!&#39;);</span></span>
+<span class="line"><span>});</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 触发事件</span></span>
+<span class="line"><span>myEmitter.emit(&#39;event&#39;);</span></span></code></pre></div><h3 id="_2-非阻塞-i-o" tabindex="-1">2.非阻塞 I/O <a class="header-anchor" href="#_2-非阻塞-i-o" aria-label="Permalink to &quot;2.非阻塞 I/O&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>const fs = require(&#39;fs&#39;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 异步读取文件 (非阻塞)</span></span>
+<span class="line"><span>fs.readFile(&#39;/path/to/file&#39;, (err, data) =&gt; {</span></span>
+<span class="line"><span>  if (err) throw err;</span></span>
+<span class="line"><span>  console.log(data);</span></span>
+<span class="line"><span>});</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 同步读取文件 (阻塞)</span></span>
+<span class="line"><span>const data = fs.readFileSync(&#39;/path/to/file&#39;);</span></span>
+<span class="line"><span>console.log(data);</span></span></code></pre></div><h3 id="_3-单线程-vs-多线程" tabindex="-1">3. 单线程 vs 多线程 <a class="header-anchor" href="#_3-单线程-vs-多线程" aria-label="Permalink to &quot;3. 单线程 vs 多线程&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>// 单线程执行 (阻塞)</span></span>
+<span class="line"><span>function calculate() {</span></span>
+<span class="line"><span>  let result = 0;</span></span>
+<span class="line"><span>  for (let i = 0; i &lt; 1e9; i++) {</span></span>
+<span class="line"><span>    result += i;</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>  return result;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 多线程执行 (Worker Threads)</span></span>
+<span class="line"><span>const { Worker, isMainThread, parentPort } = require(&#39;worker_threads&#39;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if (isMainThread) {</span></span>
+<span class="line"><span>  const worker = new Worker(__filename);</span></span>
+<span class="line"><span>  worker.on(&#39;message&#39;, (result) =&gt; console.log(result));</span></span>
+<span class="line"><span>} else {</span></span>
+<span class="line"><span>  parentPort.postMessage(calculate());</span></span>
+<span class="line"><span>}</span></span></code></pre></div><h2 id="二、内置模块" tabindex="-1">二、内置模块 <a class="header-anchor" href="#二、内置模块" aria-label="Permalink to &quot;二、内置模块&quot;">​</a></h2><h3 id="_1-文件系统-fs" tabindex="-1">1. 文件系统 (fs) <a class="header-anchor" href="#_1-文件系统-fs" aria-label="Permalink to &quot;1. 文件系统 (fs)&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>const fs = require(&#39;fs/promises&#39;); // 推荐使用Promise API</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 读取文件</span></span>
+<span class="line"><span>fs.readFile(&#39;data.txt&#39;, &#39;utf8&#39;)</span></span>
+<span class="line"><span>  .then(data =&gt; console.log(data))</span></span>
+<span class="line"><span>  .catch(err =&gt; console.error(err));</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 写入文件</span></span>
+<span class="line"><span>fs.writeFile(&#39;output.txt&#39;, &#39;Hello World!&#39;)</span></span>
+<span class="line"><span>  .then(() =&gt; console.log(&#39;写入成功&#39;))</span></span>
+<span class="line"><span>  .catch(err =&gt; console.error(err));</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 目录操作</span></span>
+<span class="line"><span>fs.mkdir(&#39;new-dir&#39;)</span></span>
+<span class="line"><span>  .then(() =&gt; fs.readdir(&#39;.&#39;))</span></span>
+<span class="line"><span>  .then(files =&gt; console.log(files))</span></span>
+<span class="line"><span>  .catch(err =&gt; console.error(err));</span></span></code></pre></div><h3 id="_2-http-服务器" tabindex="-1">2.HTTP 服务器 <a class="header-anchor" href="#_2-http-服务器" aria-label="Permalink to &quot;2.HTTP 服务器&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>const http = require(&#39;http&#39;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>const server = http.createServer((req, res) =&gt; {</span></span>
+<span class="line"><span>  res.statusCode = 200;</span></span>
+<span class="line"><span>  res.setHeader(&#39;Content-Type&#39;, &#39;text/plain&#39;);</span></span>
+<span class="line"><span>  res.end(&#39;Hello World!\n&#39;);</span></span>
+<span class="line"><span>});</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>server.listen(3000, &#39;localhost&#39;, () =&gt; {</span></span>
+<span class="line"><span>  console.log(&#39;服务器运行在 http://localhost:3000/&#39;);</span></span>
+<span class="line"><span>});</span></span></code></pre></div><h3 id="_3-路径处理" tabindex="-1">3. 路径处理 <a class="header-anchor" href="#_3-路径处理" aria-label="Permalink to &quot;3. 路径处理&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span> TODO 后续补齐 server端的</span></span></code></pre></div><h3 id="_4-事件模块-events" tabindex="-1">4. 事件模块 (events) <a class="header-anchor" href="#_4-事件模块-events" aria-label="Permalink to &quot;4. 事件模块 (events)&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>const EventEmitter = require(&#39;events&#39;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>class Logger extends EventEmitter {</span></span>
+<span class="line"><span>  log(message) {</span></span>
+<span class="line"><span>    this.emit(&#39;message&#39;, `${message} (${new Date().toISOString()})`);</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>const logger = new Logger();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>logger.on(&#39;message&#39;, (msg) =&gt; {</span></span>
+<span class="line"><span>  console.log(`日志: ${msg}`);</span></span>
+<span class="line"><span>});</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>logger.log(&#39;系统启动&#39;);</span></span></code></pre></div><h3 id="_5-流-stream" tabindex="-1">5. 流 (stream) <a class="header-anchor" href="#_5-流-stream" aria-label="Permalink to &quot;5. 流 (stream)&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span> const fs = require(&#39;fs&#39;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 创建可读流</span></span>
+<span class="line"><span>const readStream = fs.createReadStream(&#39;input.txt&#39;, { encoding: &#39;utf8&#39; });</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 创建可写流</span></span>
+<span class="line"><span>const writeStream = fs.createWriteStream(&#39;output.txt&#39;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 管道操作 (高效处理大文件)</span></span>
+<span class="line"><span>readStream.pipe(writeStream);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 监听事件</span></span>
+<span class="line"><span>readStream.on(&#39;data&#39;, (chunk) =&gt; {</span></span>
+<span class="line"><span>  console.log(`读取到数据块: ${chunk.length} 字节`);</span></span>
+<span class="line"><span>});</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>readStream.on(&#39;end&#39;, () =&gt; {</span></span>
+<span class="line"><span>  console.log(&#39;读取完成&#39;);</span></span>
+<span class="line"><span>});</span></span></code></pre></div><h2 id="三、异步编程" tabindex="-1">三、异步编程 <a class="header-anchor" href="#三、异步编程" aria-label="Permalink to &quot;三、异步编程&quot;">​</a></h2><h3 id="_1-回调函数" tabindex="-1">1. 回调函数 <a class="header-anchor" href="#_1-回调函数" aria-label="Permalink to &quot;1. 回调函数&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>const fs = require(&#39;fs&#39;);</span></span>
+<span class="line"><span>fs.readFile(&#39;data.txt&#39;, &#39;utf8&#39;, (err, data) =&gt; {</span></span>
+<span class="line"><span>  if (err) {</span></span>
+<span class="line"><span>    console.error(&#39;读取文件失败:&#39;, err);</span></span>
+<span class="line"><span>    return;</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>  console.log(&#39;文件内容:&#39;, data);</span></span>
+<span class="line"><span>});</span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span> const fs = require(&#39;fs/promises&#39;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>fs.readFile(&#39;data.txt&#39;, &#39;utf8&#39;)</span></span>
+<span class="line"><span>  .then(data =&gt; console.log(data))</span></span>
+<span class="line"><span>  .catch(err =&gt; console.error(err));</span></span></code></pre></div><h3 id="_2-promise" tabindex="-1">2. Promise <a class="header-anchor" href="#_2-promise" aria-label="Permalink to &quot;2. Promise&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>// 并行执行多个Promise</span></span>
+<span class="line"><span>Promise.all([</span></span>
+<span class="line"><span>  fs.readFile(&#39;file1.txt&#39;),</span></span>
+<span class="line"><span>  fs.readFile(&#39;file2.txt&#39;)</span></span>
+<span class="line"><span>])</span></span>
+<span class="line"><span>  .then(([data1, data2]) =&gt; console.log(data1, data2))</span></span>
+<span class="line"><span>  .catch(err =&gt; console.error(err));</span></span></code></pre></div><h3 id="_3-async-await" tabindex="-1">3. async/await <a class="header-anchor" href="#_3-async-await" aria-label="Permalink to &quot;3. async/await&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>const fs = require(&#39;fs/promises&#39;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>async function readFiles() {</span></span>
+<span class="line"><span>  try {</span></span>
+<span class="line"><span>    const data1 = await fs.readFile(&#39;file1.txt&#39;, &#39;utf8&#39;);</span></span>
+<span class="line"><span>    const data2 = await fs.readFile(&#39;file2.txt&#39;, &#39;utf8&#39;);</span></span>
+<span class="line"><span>    console.log(data1, data2);</span></span>
+<span class="line"><span>  } catch (err) {</span></span>
+<span class="line"><span>    console.error(err);</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>readFiles();</span></span></code></pre></div><h3 id="_4-事件循环机制" tabindex="-1">4. 事件循环机制 <a class="header-anchor" href="#_4-事件循环机制" aria-label="Permalink to &quot;4. 事件循环机制&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>┌───────────────────────────┐</span></span>
+<span class="line"><span>│           定时器队列        │</span></span>
+<span class="line"><span>└─────────────┬─────────────┘</span></span>
+<span class="line"><span>              │</span></span>
+<span class="line"><span>┌─────────────▼─────────────┐</span></span>
+<span class="line"><span>│          I/O回调队列        │</span></span>
+<span class="line"><span>└─────────────┬─────────────┘</span></span>
+<span class="line"><span>              │</span></span>
+<span class="line"><span>┌─────────────▼─────────────┐</span></span>
+<span class="line"><span>│          空闲/预备队列      │</span></span>
+<span class="line"><span>└─────────────┬─────────────┘</span></span>
+<span class="line"><span>              │</span></span>
+<span class="line"><span>┌─────────────▼─────────────┐</span></span>
+<span class="line"><span>│           轮询阶段          │</span></span>
+<span class="line"><span>│  (等待新的I/O事件)          │</span></span>
+<span class="line"><span>└─────────────┬─────────────┘</span></span>
+<span class="line"><span>              │</span></span>
+<span class="line"><span>┌─────────────▼─────────────┐</span></span>
+<span class="line"><span>│           检查阶段          │</span></span>
+<span class="line"><span>│  (执行setImmediate回调)     │</span></span>
+<span class="line"><span>└─────────────┬─────────────┘</span></span>
+<span class="line"><span>              │</span></span>
+<span class="line"><span>┌─────────────▼─────────────┐</span></span>
+<span class="line"><span>│       关闭回调队列          │</span></span>
+<span class="line"><span>└───────────────────────────┘</span></span></code></pre></div><h2 id="四、模块系统" tabindex="-1">四、模块系统 <a class="header-anchor" href="#四、模块系统" aria-label="Permalink to &quot;四、模块系统&quot;">​</a></h2><h3 id="_1-commonjs-模块" tabindex="-1">1. CommonJS 模块 <a class="header-anchor" href="#_1-commonjs-模块" aria-label="Permalink to &quot;1.  CommonJS 模块&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span> // math.js (模块导出)</span></span>
+<span class="line"><span>exports.add = (a, b) =&gt; a + b;</span></span>
+<span class="line"><span>exports.subtract = (a, b) =&gt; a - b;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// main.js (模块导入)</span></span>
+<span class="line"><span>const math = require(&#39;./math&#39;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>console.log(math.add(5, 3)); // 8</span></span>
+<span class="line"><span>console.log(math.subtract(5, 3)); // 2</span></span></code></pre></div><h3 id="_2-es6-模块" tabindex="-1">2. ES6 模块 <a class="header-anchor" href="#_2-es6-模块" aria-label="Permalink to &quot;2.  ES6 模块&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>// 1. 启用 ES 模块支持 (package.json)</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>  &quot;type&quot;: &quot;module&quot;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span> // math.js (模块导出)</span></span>
+<span class="line"><span>export const add = (a, b) =&gt; a + b;</span></span>
+<span class="line"><span>export const subtract = (a, b) =&gt; a - b;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// main.js (模块导入)</span></span>
+<span class="line"><span>import { add, subtract } from &#39;./math&#39;;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>console.log(add(5, 3)); // 8</span></span>
+<span class="line"><span>console.log(subtract(5, 3)); // 2</span></span></code></pre></div><h3 id="_3-执行顺序" tabindex="-1">3. 执行顺序 <a class="header-anchor" href="#_3-执行顺序" aria-label="Permalink to &quot;3. 执行顺序&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span> // 模块加载是同步的</span></span>
+<span class="line"><span>console.log(&#39;模块开始加载&#39;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>const dependency = require(&#39;./dependency&#39;);</span></span>
+<span class="line"><span>console.log(&#39;依赖模块已加载&#39;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 模块初始化代码</span></span>
+<span class="line"><span>console.log(&#39;模块初始化完成&#39;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 导出接口</span></span>
+<span class="line"><span>exports.doSomething = () =&gt; { /* ... */ };</span></span></code></pre></div><h2 id="五、实用工具" tabindex="-1">五、实用工具 <a class="header-anchor" href="#五、实用工具" aria-label="Permalink to &quot;五、实用工具&quot;">​</a></h2><h3 id="_1-实用工具" tabindex="-1">1. 实用工具 <a class="header-anchor" href="#_1-实用工具" aria-label="Permalink to &quot;1. 实用工具&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span># 使用内置调试器</span></span>
+<span class="line"><span>node inspect myscript.js</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># Chrome DevTools 调试</span></span>
+<span class="line"><span>node --inspect-brk myscript.js</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 在浏览器中打开</span></span>
+<span class="line"><span>chrome://inspect</span></span></code></pre></div><h3 id="_2-性能分析" tabindex="-1">2. 性能分析 <a class="header-anchor" href="#_2-性能分析" aria-label="Permalink to &quot;2. 性能分析&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span># 生成 CPU 性能分析文件</span></span>
+<span class="line"><span>node --prof myscript.js</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 生成内存堆快照</span></span>
+<span class="line"><span>const inspector = require(&#39;inspector&#39;);</span></span>
+<span class="line"><span>inspector.open();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 在代码中触发堆快照</span></span>
+<span class="line"><span>const session = new inspector.Session();</span></span>
+<span class="line"><span>session.connect();</span></span>
+<span class="line"><span>session.post(&#39;HeapProfiler.takeHeapSnapshot&#39;, null, (err, data) =&gt; {</span></span>
+<span class="line"><span>  // 保存堆快照数据</span></span>
+<span class="line"><span>});</span></span></code></pre></div><h3 id="_3-环境变量" tabindex="-1">3. 环境变量 <a class="header-anchor" href="#_3-环境变量" aria-label="Permalink to &quot;3. 环境变量&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>// 访问环境变量</span></span>
+<span class="line"><span>console.log(process.env.NODE_ENV); // 例如: &#39;development&#39;</span></span>
+<span class="line"><span>console.log(process.env.PORT); // 例如: 3000</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// package.json 中设置环境变量</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>  &quot;scripts&quot;: {</span></span>
+<span class="line"><span>    &quot;start&quot;: &quot;NODE_ENV=production node server.js&quot;</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span></code></pre></div><h3 id="_4-进程管理" tabindex="-1">4. 进程管理 <a class="header-anchor" href="#_4-进程管理" aria-label="Permalink to &quot;4. 进程管理&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>// 获取当前进程信息</span></span>
+<span class="line"><span>console.log(&#39;进程ID:&#39;, process.pid);</span></span>
+<span class="line"><span>console.log(&#39;命令行参数:&#39;, process.argv);</span></span>
+<span class="line"><span>console.log(&#39;内存使用情况:&#39;, process.memoryUsage());</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 监听进程退出事件</span></span>
+<span class="line"><span>process.on(&#39;exit&#39;, (code) =&gt; {</span></span>
+<span class="line"><span>  console.log(`进程退出，退出码: ${code}`);</span></span>
+<span class="line"><span>});</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 主动退出进程</span></span>
+<span class="line"><span>process.exit(1); // 退出码1表示异常退出</span></span></code></pre></div><h2 id="六、最佳实践" tabindex="-1">六、最佳实践 <a class="header-anchor" href="#六、最佳实践" aria-label="Permalink to &quot;六、最佳实践&quot;">​</a></h2><h3 id="_1-错误处理" tabindex="-1">1. 错误处理 <a class="header-anchor" href="#_1-错误处理" aria-label="Permalink to &quot;1. 错误处理&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>// 全局错误处理</span></span>
+<span class="line"><span>process.on(&#39;uncaughtException&#39;, (err) =&gt; {</span></span>
+<span class="line"><span>  console.error(&#39;未捕获的异常:&#39;, err);</span></span>
+<span class="line"><span>  process.exit(1);</span></span>
+<span class="line"><span>});</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>process.on(&#39;unhandledRejection&#39;, (reason, promise) =&gt; {</span></span>
+<span class="line"><span>  console.error(&#39;未处理的Promise拒绝:&#39;, promise, &#39;原因:&#39;, reason);</span></span>
+<span class="line"><span>});</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 使用 domain 模块 (不推荐用于新代码)</span></span>
+<span class="line"><span>const domain = require(&#39;domain&#39;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>const d = domain.create();</span></span>
+<span class="line"><span>d.on(&#39;error&#39;, (err) =&gt; {</span></span>
+<span class="line"><span>  console.error(&#39;Domain 捕获的错误:&#39;, err);</span></span>
+<span class="line"><span>});</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>d.run(() =&gt; {</span></span>
+<span class="line"><span>  // 可能抛出错误的代码</span></span>
+<span class="line"><span>});</span></span></code></pre></div><h3 id="_2-性能优化" tabindex="-1">2. 性能优化 <a class="header-anchor" href="#_2-性能优化" aria-label="Permalink to &quot;2. 性能优化&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>// 1. 使用集群模块实现多实例</span></span>
+<span class="line"><span>const cluster = require(&#39;cluster&#39;);</span></span>
+<span class="line"><span>const http = require(&#39;http&#39;);</span></span>
+<span class="line"><span>const numCPUs = require(&#39;os&#39;).cpus().length;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if (cluster.isPrimary) {</span></span>
+<span class="line"><span>  for (let i = 0; i &lt; numCPUs; i++) {</span></span>
+<span class="line"><span>    cluster.fork();</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>} else {</span></span>
+<span class="line"><span>  http.createServer((req, res) =&gt; {</span></span>
+<span class="line"><span>    res.end(&#39;Hello World!&#39;);</span></span>
+<span class="line"><span>  }).listen(3000);</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 2. 避免阻塞事件循环</span></span>
+<span class="line"><span>// 不好的做法</span></span>
+<span class="line"><span>function processLargeArray() {</span></span>
+<span class="line"><span>  const arr = new Array(1e6).fill(0);</span></span>
+<span class="line"><span>  return arr.map((_, i) =&gt; i * 2);</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 好的做法 (使用 Worker Threads)</span></span>
+<span class="line"><span>const { Worker } = require(&#39;worker_threads&#39;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>new Worker(`</span></span>
+<span class="line"><span>  const arr = new Array(1e6).fill(0);</span></span>
+<span class="line"><span>  parentPort.postMessage(arr.map((_, i) =&gt; i * 2));</span></span>
+<span class="line"><span>`, { eval: true }).on(&#39;message&#39;, (result) =&gt; {</span></span>
+<span class="line"><span>  console.log(&#39;处理完成&#39;);</span></span>
+<span class="line"><span>});</span></span></code></pre></div><h3 id="_3-安全建议" tabindex="-1">3. 安全建议 <a class="header-anchor" href="#_3-安全建议" aria-label="Permalink to &quot;3. 安全建议&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>// 1. 验证用户输入</span></span>
+<span class="line"><span>const http = require(&#39;http&#39;);</span></span>
+<span class="line"><span>const { exec } = require(&#39;child_process&#39;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>http.createServer((req, res) =&gt; {</span></span>
+<span class="line"><span>  if (req.url.startsWith(&#39;/exec&#39;)) {</span></span>
+<span class="line"><span>    const command = req.url.split(&#39;=&#39;)[1];</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    // 危险: 直接执行用户输入</span></span>
+<span class="line"><span>    // exec(command, (err, stdout) =&gt; { ... });</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    // 安全做法: 验证输入</span></span>
+<span class="line"><span>    const allowedCommands = [&#39;ls&#39;, &#39;pwd&#39;];</span></span>
+<span class="line"><span>    if (allowedCommands.includes(command)) {</span></span>
+<span class="line"><span>      exec(command, (err, stdout) =&gt; {</span></span>
+<span class="line"><span>        res.end(stdout);</span></span>
+<span class="line"><span>      });</span></span>
+<span class="line"><span>    } else {</span></span>
+<span class="line"><span>      res.statusCode = 400;</span></span>
+<span class="line"><span>      res.end(&#39;Invalid command&#39;);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}).listen(3000);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 2. 最小化权限运行</span></span>
+<span class="line"><span>process.setgid(1000); // 设置组ID</span></span>
+<span class="line"><span>process.setuid(1000); // 设置用户ID</span></span></code></pre></div></div></div></main><footer class="VPDocFooter" data-v-39a288b8 data-v-e257564d><!--[--><!--]--><div class="edit-info" data-v-e257564d><!----><div class="last-updated" data-v-e257564d><p class="VPLastUpdated" data-v-e257564d data-v-e98dd255>最近更新时间: <time datetime="2025-06-22T12:57:02.000Z" data-v-e98dd255></time></p></div></div><nav class="prev-next" aria-labelledby="doc-footer-aria-label" data-v-e257564d><span class="visually-hidden" id="doc-footer-aria-label" data-v-e257564d>Pager</span><div class="pager" data-v-e257564d><a class="VPLink link pager-link prev" href="/nginx.html" data-v-e257564d><!--[--><span class="desc" data-v-e257564d>上一篇</span><span class="title" data-v-e257564d>Nginx</span><!--]--></a></div><div class="pager" data-v-e257564d><a class="VPLink link pager-link next" href="/electron.html" data-v-e257564d><!--[--><span class="desc" data-v-e257564d>下一篇</span><span class="title" data-v-e257564d>Electron 基本信息</span><!--]--></a></div></nav></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><!----><!--[--><!--]--></div></div>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"docker.md\":\"DyfoM7CX\",\"electron.md\":\"AvRfXcDR\",\"index.md\":\"M7mfq-BE\",\"nginx.md\":\"De_QZ-8e\",\"node.md\":\"B2VSpatu\",\"python.md\":\"rIcYga3T\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"en-US\",\"dir\":\"ltr\",\"title\":\"晓磊日记屋\",\"description\":\"学习记录\",\"base\":\"/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"logo\":\"/images/xiaolei.png\",\"nav\":[{\"text\":\"首页\",\"link\":\"/\"}],\"sidebar\":[{\"text\":\"Nginx\",\"items\":[{\"text\":\"Nginx\",\"link\":\"/nginx\"}]},{\"text\":\"Node.js\",\"items\":[{\"text\":\"Node.js\",\"link\":\"/node\"}]},{\"text\":\"Electron\",\"items\":[{\"text\":\"Electron 基本信息\",\"link\":\"/electron\"}]}],\"socialLinks\":[{\"icon\":\"github\",\"link\":\"https://diarylodgex.github.io\"}],\"lastUpdatedText\":\"最近更新时间\",\"docFooter\":{\"prev\":\"上一篇\",\"next\":\"下一篇\"}},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":false}");</script>
+    
+  </body>
+</html>
