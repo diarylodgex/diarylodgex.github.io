@@ -2,8 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  // 基础路径
-  base: "/",
+  
   head: [
     ['link', { rel: 'icon', href: '/images/favicon.ico' }]
     ],
@@ -42,8 +41,17 @@ export default defineConfig({
       { icon: 'github', link: 'https://diarylodgex.github.io' }
     ],
     lastUpdatedText: "最近更新时间",
-    docFooter: { prev: '上一篇', next: '下一篇' }
+    docFooter: { prev: '上一篇', next: '下一篇' },
+    outline: {
+      level: [2, 3],
+      label: "页面导航",
+    },
+    returnToTopLabel: "回到顶部",
   },
+  vite: { 
+    // https://cn.vitejs.dev/config/shared-options.html#publicdir
+    publicDir: "../public", // 指定 public 目录路径
+  },  
   // 最新更新时间
   lastUpdated: true,
 })
