@@ -35,6 +35,12 @@ export default defineConfig({
         items:[
           { text: 'Electron 基本信息', link: '/electron' },
         ]
+      },
+      {
+        text:'Git',
+        items:[
+          { text: 'Git 提交规范', link: '/git' },
+        ]
       }
     ],
     socialLinks: [
