@@ -23,5 +23,10 @@ features:
     title: Electron
     details: 你的桌面应用开发得力助手，使用JavaScript，尽享编程之便捷！
     link: /electron
+  - icon: 
+     src: images/icon_git.svg
+    title: Git
+    details: 版本控制工具，让你更方便地管理代码，协作开发。
+    link: /git
 ---
 

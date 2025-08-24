@@ -38,11 +38,13 @@ export default defineConfig({
       },
       {
         text:'Git',
+        collapsed: true,
         items:[
           { text: 'Git 提交规范', link: '/git' },
+          { text: 'Git 常用命令', link: '/gitcommand' },
         ]
       }
-    ],
+    ],                              
     socialLinks: [
       { icon: 'github', link: 'https://diarylodgex.github.io' }
     ],
