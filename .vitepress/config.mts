@@ -2,14 +2,14 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  
+
   head: [
     ['link', { rel: 'icon', href: '/images/favicon.ico' }]
     ],
   title: "晓磊日记屋",
   description: "学习记录",
-  outDir: "dist", 
-  srcDir: "src", 
+  outDir: "dist",
+  srcDir: "src",
   themeConfig: {
     logo:"/images/xiaolei.png",
     // https://vitepress.dev/reference/default-theme-config
@@ -20,18 +20,29 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Nginx',
+        collapsed: true,
         items: [
           { text: 'Nginx', link: '/nginx' },
         ]
       },
       {
         text:'Node.js',
+        collapsed: true,
         items:[
-          { text: 'Node.js', link: '/node' },
+          { text: 'Node文档', link: '/node' },
+        ]
+      },
+      {
+        text:'Typescript',
+        collapsed: true,
+        items:[
+          { text: 'Ts文档', link: '/tsdoc' },
+          { text: 'Ts实际应用', link: '/typescript' },
         ]
       },
       {
         text:"Electron",
+        collapsed: true,
         items:[
           { text: 'Electron 基本信息', link: '/electron' },
         ]
@@ -44,7 +55,7 @@ export default defineConfig({
           { text: 'Git 常用命令', link: '/gitcommand' },
         ]
       }
-    ],                              
+    ],
     socialLinks: [
       { icon: 'github', link: 'https://diarylodgex.github.io' }
     ],
@@ -56,10 +67,10 @@ export default defineConfig({
     },
     returnToTopLabel: "回到顶部",
   },
-  vite: { 
+  vite: {
     // https://cn.vitejs.dev/config/shared-options.html#publicdir
     publicDir: "../public", // 指定 public 目录路径
-  },  
+  },
   // 最新更新时间
   lastUpdated: true,
 })
